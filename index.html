@@ -47,7 +47,6 @@
         .project-links {
             margin-top: 20px;
             padding: 10px 0;
-            border-top: 1px solid #ddd;
             text-align: center;
         }
         .project-links h3 {
@@ -56,23 +55,31 @@
             color: #0073e6;
             text-decoration: underline;
         }
-        .project-links h4 {
-            margin: 15px 0 5px;
+        .project-box {
+            border: 5px solid black;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: center;
+        }
+        .project-box h4 {
+            margin: 15px 0 10px;
             font-size: 1.2em;
             color: #333333;
         }
-        .project-links a {
+        .project-box a {
             display: inline-block;
             color: #0073e6;
             text-decoration: none;
             margin: 5px 0;
         }
-        .project-links a:hover {
+        .project-box a:hover {
             text-decoration: underline;
         }
-        .project-links img {
+        .project-box img {
             display: block;
-            margin: 5px auto;
+            margin: 10px auto;
             max-width: 150px;
             height: auto;
             border: 1px solid #ddd;
@@ -86,21 +93,27 @@
         <h2>Big Data Analytics M.S., San Diego State University</h2>
     </header>
     <main>
-        <p>As far back as I can remember, I have always dreamed of being a scientist. The thrill of discovery and the satisfaction of solving problems have driven me throughout my academic and professional career. I seek the reward of breaking down complex challenges, learning new skills, and crafting innovative solutions, and I have cultivated a learning mindset that enables me to adapt to new challenges. Every challenge I have faced has shaped who I am today, and I welcome the growth and transformation that will come with the next chapter in my academic journey.</p>
+        <p>As far back as I can remember, I have always dreamed of being a scientist. The thrill of discovery and the satisfaction of solving problems have driven me throughout my academic and professional career. I seek the reward of breaking down complex challenges, learning new skills, and crafting innovative solutions, and I have cultivated a learning mindset that enables me to adapt to new challenges. Every challenge I have faced has shaped who I am today, and I welcome the growth and transformation that will come with the next chapter of my academic journey.</p>
         <p>The projects in this portfolio highlight the breadth of my technical abilities, but they are also meant to represent my deeper purpose: to harness the power of data science to create solutions that make a difference. I offer this portfolio as a testament to my passion for learning, problem solving, and building a better future through the thoughtful application of advanced technologies.</p>
         <div class="project-links">
             <h3>Explore My Projects</h3>
-            <h4>Programming and Software Development</h4>
-            <a href="programming/go1.html">Go1 Software Package</a>
-            <img src="assets/go1_inference_hardware_3.jpg" alt="Go1 Software Package Thumbnail">
-            <a href="programming/machine_learning.html">Machine Learning Implementations</a>
-            <img src="assets/machine_learning_thumbnail.png" alt="Machine Learning Implementations Thumbnail">
-            <h4>Industrial Problem Solving</h4>
-            <a href="industrial/mobile_payment.html">Mobile Payment System Mounting Solution</a>
-            <img src="assets/mount_tower_3.jpg" alt="Mobile Payment System Mounting Solution Thumbnail">
-            <h4>Leadership and Outreach</h4>
-            <a href="outreach/3d_printing.html">Miramar Ranch Elementary 3D Printing Outreach Program</a>
-            <img src="assets/Me_and_students_group_selfie_with_printer.jpg" alt="3D Printing Outreach Program Thumbnail">
+            <div class="project-box">
+                <h4>Programming and Software Development</h4>
+                <a href="programming/go1.html">Go1 Software Package</a>
+                <img src="assets/go1_inference_hardware_3.jpg" alt="Go1 Software Package Thumbnail">
+                <a href="programming/machine_learning.html">Machine Learning Implementations</a>
+                <img src="assets/machine_learning_thumbnail.png" alt="Machine Learning Implementations Thumbnail">
+            </div>
+            <div class="project-box">
+                <h4>Industrial Problem Solving</h4>
+                <a href="industrial/mobile_payment.html">Mobile Payment System Mounting Solution</a>
+                <img src="assets/mount_tower_3.jpg" alt="Mobile Payment System Mounting Solution Thumbnail">
+            </div>
+            <div class="project-box">
+                <h4>Leadership and Outreach</h4>
+                <a href="outreach/3d_printing.html">Miramar Ranch Elementary 3D Printing Outreach Program</a>
+                <img src="assets/Me_and_students_group_selfie_with_printer.jpg" alt="3D Printing Outreach Program Thumbnail">
+            </div>
         </div>
     </main>
     <footer>
