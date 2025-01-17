@@ -3,78 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mobile Payment System Mounting Solution - Project Portfolio">
+    <meta name="description" content="Mobile Payment System Mounting Solution">
     <title>Mobile Payment System Mounting Solution</title>
+    <link rel="stylesheet" href="../bootstrap.min.sandstone.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+        .navbar-brand {
+            font-size: 1.75rem;
+            font-weight: bold;
         }
-        header {
-            background-color: #0073e6;
-            color: #fff;
-            padding: 20px 10px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        header h2 {
-            margin: 5px 0 0;
-            font-size: 1.5em;
-            font-weight: normal;
-        }
-        main {
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background: #0073e6;
-            color: #fff;
-            margin-top: 20px;
-        }
-        .back-link {
+        .navbar-subtitle {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.8);
             display: block;
+        }
+        .btn-warning {
             margin: 20px 0;
+        }
+        img, video {
+            display: block;
+            margin: 20px auto;
+            border-radius: 0.5rem;
+            max-width: 66%;
+        }
+        figure {
             text-align: center;
         }
-        .back-link a {
-            color: #0073e6;
-            text-decoration: none;
-        }
-        .back-link a:hover {
-            text-decoration: underline;
+        figure figcaption {
+            margin-top: 5px;
+            font-style: italic;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Mobile Payment System Mounting Solution</h1>
-        <h2>Industrial Problem Solving</h2>
-    </header>
-    <main>
-        <p>This project involved designing and manufacturing a custom mount to integrate a mobile payment terminal with an iPad case. Commissioned by Go Rentals, an elite vehicle rental company operating at over 140 locations nationwide, the solution allowed staff to accept credit card payments efficiently and securely as clients disembarked from private aircraft. The project required innovative problem solving, from prototyping to scaling production, and exemplifies my ability to address technical challenges in real-world industrial applications.</p>
-
-        <h3>My Role</h3>
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Robert Ashe - Project Portfolio
+                <span class="navbar-subtitle">Big Data Analytics M.S., San Diego State University</span>
+            </a>
+        </div>
+    </nav>
+    <main class="container my-5">
+        <h1 class="text-center">Mobile Payment System Mounting Solution</h1>
+        <p>This project involved designing and manufacturing a custom mount to integrate a mobile payment terminal with an iPad case. Commissioned by Go Rentals, an elite vehicle rental company operating at 220 locations nationwide, the solution allowed staff to accept credit card payments efficiently and securely as clients disembarked from private aircraft. The project required innovative problem solving, from prototyping to scaling production, and exemplifies my ability to address technical challenges in real-world industrial applications.</p>
+        <div class="text-center">
+            <a href="#" class="btn btn-warning" target="_blank">Image Gallery</a>
+        </div>
+        <h2 class="mt-5">My Role</h2>
         <p>I was responsible for end-to-end development, including:</p>
         <ul>
             <li>Conducting stakeholder consultations to define project requirements.</li>
             <li>Designing and prototyping the mount using CAD and 3D printing.</li>
             <li>Managing production and optimizing the manufacturing process to deliver 400 units within established time constraints.</li>
         </ul>
-
-        <h3>Technical Details</h3>
+        <figure>
+            <img src="../assets/prototype_2.jpg" alt="Prototype of mount">
+            <figcaption>Prototype of mount (white) with 3D printed model of idTech mobile credit card terminal (black).</figcaption>
+        </figure>
+        <h2>Technical Details</h2>
         <ul>
             <li><strong>Design and Prototyping:</strong>
                 <ul>
@@ -84,9 +69,9 @@
             </li>
             <li><strong>Manufacturing Optimization:</strong>
                 <ul>
-                    <li><strong>GCODE Optimization:</strong> Modified GCODE files to enhance 3D printer productivity while maintaining high-quality standards.</li>
-                    <li><strong>Automation with Python:</strong> Wrote scripts to automate repetitive processes, reducing manual intervention.</li>
-                    <li><strong>Precision Techniques:</strong> Developed a reliable method for embedding fasteners into the printed mounts to ensure durability and ease of assembly.</li>
+                    <li>GCODE Optimization: Modified GCODE files to enhance 3D printer productivity while maintaining high-quality standards.</li>
+                    <li>Automation with Python: Wrote scripts to automate repetitive processes, reducing manual intervention.</li>
+                    <li>Precision Techniques: Developed a reliable method for embedding fasteners into the printed mounts to ensure durability and ease of assembly.</li>
                 </ul>
             </li>
             <li><strong>Production Scaling:</strong>
@@ -96,34 +81,52 @@
                 </ul>
             </li>
         </ul>
-
-        <h3>Challenges and Solutions</h3>
+        <figure>
+            <img src="../assets/prototype_3.jpg" alt="Frontside view of installed mount">
+            <figcaption>Frontside view of installed mount and disassembled mount showing hardware and mounting geometry.</figcaption>
+        </figure>
+        <h2>Challenges and Solutions</h2>
         <ul>
-            <li><strong>Scaling Production:</strong> Producing 400 high-quality units with limited resources and time.
+            <li><strong>Scaling Production:</strong>
                 <ul>
-                    <li>Solution: Streamlined the manufacturing workflow, automated processes, and optimized printer calibration.</li>
+                    <li><strong>Challenge:</strong> Producing 400 high-quality units with limited resources and time.</li>
+                    <li><strong>Solution:</strong> Streamlined the manufacturing workflow, automated processes, and optimized printer calibration.</li>
                 </ul>
             </li>
-            <li><strong>Maintaining Precision:</strong> Ensuring consistent quality across all units while increasing production speed.
+            <li><strong>Maintaining Precision:</strong>
                 <ul>
-                    <li>Solution: Fine-tuned the 3D printer and implemented innovative techniques for embedding mechanical components.</li>
+                    <li><strong>Challenge:</strong> Ensuring consistent quality across all units while increasing production speed.</li>
+                    <li><strong>Solution:</strong> Fine-tuned the 3D printer and implemented innovative techniques for embedding mechanical components.</li>
                 </ul>
             </li>
-            <li><strong>Time Constraints:</strong> Balancing production demands with my responsibilities as a student.
+            <li><strong>Time Constraints:</strong>
                 <ul>
-                    <li>Solution: Efficiently managed time by automating tasks and prioritizing the most effective optimizations.</li>
+                    <li><strong>Challenge:</strong> Balancing production demands with my responsibilities as a student.</li>
+                    <li><strong>Solution:</strong> Efficiently managed time by automating tasks and prioritizing the most effective optimizations.</li>
                 </ul>
             </li>
         </ul>
-
-        <h3>Outcome and Impact</h3>
-        <p>Delivered all units on time and exceeded Go Rentals' expectations for quality and durability. Improved the payment process for Go Rentals staff, enabling smoother operations in high-demand settings. Gained valuable experience in scaling manufacturing processes and solving complex industrial challenges, which provided insights into parallels with scaling software systems.</p>
-
-        <div class="back-link">
-            <a href="../index.html">&larr; Back to Portfolio</a>
-        </div>
+        <h2>Outcome and Impact</h2>
+        <ul>
+            <li>Delivered all units on time and exceeded Go Rentals' expectations for quality and durability.</li>
+            <li>Improved the payment process for Go Rentals staff, enabling smoother operations in high-demand settings.</li>
+            <li>Gained valuable experience in scaling manufacturing processes and solving complex industrial challenges, which provided insights into parallels with scaling software systems.</li>
+        </ul>
+        <figure>
+            <img src="../assets/prototype_3.jpg" alt="Full assembly of mobile payment solution">
+            <figcaption>Full assembly of the mobile payment solution, including iPad, custom mount (located underneath payment terminal), and idTech mobile credit card terminal.</figcaption>
+        </figure>
+        <h2>Why Include This Project?</h2>
+        <p>This project highlights my ability to combine technical tools, such as CAD design, 3D printing, and automation to solve complex industrial problems. It also demonstrates my resourcefulness, problem-solving abilities, and capacity to manage large-scale projects under tight constraints -- all critical skills applicable to data science and technical roles.</p>
+        <figure>
+            <video controls>
+                <source src="../assets/print_in_process_vid_2.MOV" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <figcaption>Video showing 3D printing process in progress during production of custom mounts.</figcaption>
+        </figure>
     </main>
-    <footer>
+    <footer class="bg-dark text-white text-center py-3">
         &copy; 2025 Robert Ashe. All rights reserved.
     </footer>
 </body>
