@@ -26,9 +26,10 @@
             max-width: 66%;
         }
         figure {
-            text-align: center;
-            display: inline-block;
-            width: 66%; /* Matches the image width */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 66%; /* Ensures figure matches the image width */
             margin: 0 auto 20px auto; /* Centers the figure */
         }
         figure figcaption {
@@ -36,6 +37,7 @@
             font-style: italic;
             font-size: 0.9rem; /* Optional: Adjust font size */
             text-align: center;
+            width: 100%; /* Ensures the caption spans the figure width */
         }
     </style>
 </head>
