@@ -3,78 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Machine Learning Implementations - Project Portfolio">
+    <meta name="description" content="Machine Learning Implementations">
     <title>Machine Learning Implementations</title>
+    <link rel="stylesheet" href="../bootstrap.min.sandstone.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+        .navbar-brand {
+            font-size: 1.75rem;
+            font-weight: bold;
         }
-        header {
-            background-color: #0073e6;
-            color: #fff;
-            padding: 20px 10px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        header h2 {
-            margin: 5px 0 0;
-            font-size: 1.5em;
-            font-weight: normal;
-        }
-        main {
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background: #0073e6;
-            color: #fff;
-            margin-top: 20px;
-        }
-        .back-link {
+        .navbar-subtitle {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.8);
             display: block;
+        }
+        .btn-success {
             margin: 20px 0;
-            text-align: center;
         }
-        .back-link a {
-            color: #0073e6;
-            text-decoration: none;
-        }
-        .back-link a:hover {
-            text-decoration: underline;
+        img {
+            display: block;
+            margin: 20px auto;
+            border-radius: 0.5rem;
+            max-width: 50%;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Machine Learning Implementations</h1>
-        <h2>Programming and Software Development</h2>
-    </header>
-    <main>
-        <p>This project is a collection of machine learning models that I developed during my time as a student in <strong>CS 549 Machine Learning</strong> at San Diego State University. It includes implementations of various machine learning techniques, ranging from foundational models like linear and logistic regression to advanced architectures like transformers and convolutional neural networks. Each model was implemented with a focus on understanding the underlying principles, and many were implemented from first principles using Python and NumPy. Additionally, I optimized these implementations to run on GPU-enabled systems, significantly improving computational efficiency. The project is available on my GitHub page at this link: <a href="https://github.com/nthPerson/Machine_Learning" target="_blank">GitHub Repository</a>.</p>
-
-        <h3>My Role</h3>
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Robert Ashe - Project Portfolio
+                <span class="navbar-subtitle">Big Data Analytics M.S., San Diego State University</span>
+            </a>
+        </div>
+    </nav>
+    <main class="container my-5">
+        <h1 class="text-center">Machine Learning Implementations</h1>
+        <p>This project is a collection of machine learning models that I developed during my time as a student in CS 549 Machine Learning at San Diego State University. It includes implementations of various machine learning techniques, ranging from foundational models like linear and logistic regression to advanced architectures like transformers and convolutional neural networks. Each model was implemented with a focus on understanding the underlying principles, and many were implemented from first principles using Python and NumPy. Additionally, I optimized these implementations to run on GPU-enabled systems, significantly improving computational efficiency.</p>
+        <div class="text-center">
+            <a href="https://github.com/nthPerson/Machine_Learning" class="btn btn-success" target="_blank">GitHub Repository</a>
+        </div>
+        <h2 class="mt-5">My Role</h2>
         <p>As a student, I not only met the expectations of the course by implementing these models, but I exceeded them by:</p>
         <ul>
             <li>Extending implementations to leverage GPU acceleration.</li>
             <li>Exploring optimization techniques for improving model training.</li>
             <li>Developing reusable code to streamline experimentation with various architectures.</li>
         </ul>
-
-        <h3>Technical Details</h3>
+        <h2>Technical Details</h2>
         <ul>
             <li><strong>Programming Languages and Tools:</strong> Python, Jupyter Notebook, NumPy, PyTorch, Scikit Learn, Pandas, Matplotlib.</li>
             <li><strong>Models Implemented:</strong>
@@ -93,29 +67,32 @@
             <li><strong>GPU Acceleration:</strong> Leveraged PyTorch for GPU training, improving performance on large datasets and deep architectures.</li>
             <li><strong>Scikit Learn:</strong> Used to demonstrate how common models like regression and clustering can be implemented with minimal code and effort.</li>
         </ul>
-
-        <h3>Challenges and Solutions</h3>
+        <img src="../assets/machine_learning_thumbnail.png" alt="Machine Learning Thumbnail">
+        <h2>Challenges and Solutions</h2>
         <ul>
-            <li><strong>Efficiency and Scalability:</strong> Running computationally expensive models on large datasets.
+            <li><strong>Efficiency and Scalability:</strong>
                 <ul>
-                    <li>Solution: Enabled GPU acceleration using PyTorch to speed up training.</li>
+                    <li><strong>Challenge:</strong> Running computationally expensive models on large datasets.</li>
+                    <li><strong>Solution:</strong> Enabled GPU acceleration using PyTorch to speed up training.</li>
                 </ul>
             </li>
-            <li><strong>Optimization:</strong> Understanding and implementing optimization techniques for neural networks.
+            <li><strong>Optimization:</strong>
                 <ul>
-                    <li>Solution: Explored advanced optimization strategies, including learning rate scheduling and momentum-based gradient updates.</li>
+                    <li><strong>Challenge:</strong> Understanding and implementing optimization techniques for neural networks.</li>
+                    <li><strong>Solution:</strong> Explored advanced optimization strategies, including learning rate scheduling and momentum-based gradient updates.</li>
                 </ul>
             </li>
         </ul>
-
-        <h3>Outcome and Impact</h3>
-        <p>Through this project, I gained a deep understanding of machine learning principles by implementing models from first principles. I developed technical proficiency in Python, NumPy, PyTorch, and Scikit Learn, while improving computational efficiency by incorporating GPU acceleration. This work demonstrates my initiative, problem-solving skills, and commitment to mastering both foundational and advanced techniques in machine learning.</p>
-
-        <div class="back-link">
-            <a href="../index.html">&larr; Back to Portfolio</a>
-        </div>
+        <h2>Outcome and Impact</h2>
+        <ul>
+            <li>Gained a deep understanding of machine learning principles by implementing models from first principles.</li>
+            <li>Developed technical proficiency in Python, NumPy, PyTorch, and Scikit Learn.</li>
+            <li>Improved computational efficiency by incorporating GPU acceleration, demonstrating practical problem solving skills.</li>
+        </ul>
+        <h2>Why Include This Project?</h2>
+        <p>This project demonstrates my hands-on experience with machine learning, my ability to work across diverse types of models, and my commitment to mastering both foundational and advanced techniques. It also reflects my initiative and love of optimization through GPU acceleration, highlighting my technical adaptability and problem-solving skills.</p>
     </main>
-    <footer>
+    <footer class="bg-dark text-white text-center py-3">
         &copy; 2025 Robert Ashe. All rights reserved.
     </footer>
 </body>
