@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIM2RDT — Agentic Digital Twins — Robert Ashe</title>
+  <meta name="description" content="BIM2RDT — an agentic AI safety-first framework turning building information models into robot-ready site digital twins, co-authored by Robert Ashe.">
+  <meta property="og:title" content="BIM2RDT — Agentic Digital Twins — Robert Ashe">
+  <meta property="og:description" content="An agentic AI safety-first framework for robot-ready site digital twins.">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body id="top">
+  <nav class="site-nav" aria-label="Primary">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Robert Ashe</a>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">MENU</button>
+      <ul class="nav-links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#featured-work">Work</a></li>
+        <li><a href="../index.html#publications">Publications</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <a class="crumb" href="../index.html#featured-work">← Back to Work</a>
+
+    <header class="detail-header">
+      <span class="label">Robotics · BIM · Publication · 2025</span>
+      <h1>BIM2RDT — Agentic Digital Twins</h1>
+      <p class="tagline">An agentic AI safety-first framework for robot-ready site digital twins.</p>
+    </header>
+
+    <div class="detail-hero">
+      <img src="../assets/img/bim2rdt-digital-twin.png" alt="BIM2RDT digital twin beside a simulated real-world construction scene">
+    </div>
+
+    <div class="detail-layout">
+      <aside class="detail-sidebar">
+        <dl>
+          <dt>Role</dt><dd>Co-author — SDSU DiCE Lab</dd>
+          <dt>Timeline</dt><dd>2024 – Present</dd>
+          <dt>Stack</dt><dd>Agentic AI · BIM/IFC · LiDAR/IMU fusion · Semantic-Gravity ICP</dd>
+          <dt>Status</dt><dd>Published — arXiv:2509.20705</dd>
+          <dt>Links</dt>
+          <dd>
+            <a href="https://arxiv.org/abs/2509.20705" target="_blank" rel="noopener">arXiv abstract</a>
+            <a href="https://arxiv.org/pdf/2509.20705" target="_blank" rel="noopener">Paper PDF</a>
+          </dd>
+        </dl>
+      </aside>
+      <div class="detail-main">
+        <section>
+          <span class="label">The Problem</span>
+          <h2>The problem</h2>
+          <p>Building information models are created once, then drift out of date the moment construction begins. Robots operating on a site need a current, semantically rich model to navigate, inspect, and monitor safety — but keeping a BIM synchronized with the physical world is an unsolved problem.</p>
+        </section>
+
+        <section>
+          <span class="label">What I Built</span>
+          <h2>What I built</h2>
+          <p>BIM2RDT is an agentic AI framework that fuses a static BIM with live LiDAR and IMU sensor data to produce safety-aware, robot-ready site digital twins. I co-authored the framework and contributed to its agentic pipeline, which grounds LLM-driven robot task planning in up-to-date geometric and semantic site context — supporting autonomous inspection, navigation, and construction-safety monitoring.</p>
+        </section>
+
+        <section>
+          <span class="label">Architecture</span>
+          <h2>Architecture</h2>
+          <p>The framework processes the as-designed BIM and live sensor streams through a multi-stage agentic pipeline. Its headline contribution is Semantic-Gravity ICP — a registration algorithm that uses LLM-derived gravity priors to constrain how robot-acquired scans align with the reference model.</p>
+          <figure>
+            <img src="../assets/img/bim2rdt-figure1.png" alt="BIM2RDT system overview diagram">
+            <figcaption>BIM2RDT system overview (Figure 1, arXiv:2509.20705).</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/bim2rdt-sg-icp.png" alt="Semantic-Gravity ICP registration, before and after alignment">
+            <figcaption>Semantic-Gravity ICP registration — before and after alignment.</figcaption>
+          </figure>
+        </section>
+
+        <section>
+          <span class="label">Highlights</span>
+          <h2>Highlights</h2>
+          <ul class="highlights">
+            <li>Fuses BIM with live LiDAR/IMU data into robot-ready site digital twins.</li>
+            <li>Semantic-Gravity ICP uses LLM-derived gravity priors to constrain scan-to-BIM registration.</li>
+            <li>Writes IoT sensor events into the IFC model via IfcTask and IfcEvent entities.</li>
+            <li>Supports autonomous inspection, navigation, and construction-safety monitoring.</li>
+          </ul>
+          <figure>
+            <img src="../assets/img/bim2rdt-hav.png" alt="Worker hand-arm vibration safety monitoring chart">
+            <figcaption>Worker hand-arm-vibration (HAV) safety monitoring.</figcaption>
+          </figure>
+        </section>
+
+        <section>
+          <span class="label">Current Research</span>
+          <h2>Uncertainty-Aware Scan-to-BIM via Evidential Deep Learning</h2>
+          <p>BIM2RDT demonstrates perception and event injection but explicitly leaves the geometric update closure — deciding when a detected discrepancy should actually edit the BIM — as future work. My CONE 652 research proposal closes exactly that gap.</p>
+          <p>It inserts a calibrated uncertainty layer between point-cloud semantic segmentation and IFC editing: a segmentation network with an evidential deep learning head produces per-point uncertainty in a single forward pass, and a decision policy maps uncertainty and scan-vs-BIM discrepancy onto an action set — autonomous update, human review, mark-missing, or ignore — committing autonomous edits only when perception and geometry agree.</p>
+          <figure>
+            <img src="../assets/img/edl-figure1.png" alt="Proposed uncertainty-aware Scan-to-BIM pipeline">
+            <figcaption>Proposed uncertainty-aware Scan-to-BIM pipeline.</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/edl-decision-map.png" alt="Decision policy over the uncertainty and discrepancy plane">
+            <figcaption>Decision policy over the (uncertainty, discrepancy) plane.</figcaption>
+          </figure>
+          <div class="downloads">
+            <a class="btn btn-outline" href="../assets/docs/edl-proposal.pdf" target="_blank" rel="noopener">Download the proposal (PDF)</a>
+            <a class="btn btn-outline" href="../assets/docs/edl-slides.pdf" target="_blank" rel="noopener">Presentation slides (PDF)</a>
+          </div>
+        </section>
+
+        <section>
+          <span class="label">Tech Stack</span>
+          <h2>Tech stack</h2>
+          <p>Agentic AI / multi-agent LLMs · BIM and IFC (IfcOpenShell) · LiDAR and IMU sensor fusion · point-cloud semantic segmentation · evidential deep learning · PyTorch.</p>
+        </section>
+
+        <section>
+          <span class="label">Gallery</span>
+          <h2>Gallery</h2>
+          <p>Related robotics work from the DiCE Lab — the Unitree Go1 quadruped sensor platform from the lab's i3ce control-framework project.</p>
+          <div class="gallery">
+            <figure><img src="../assets/go1_full_assembly_2.jpg" alt="Unitree Go1 quadruped sensor platform, full assembly"><figcaption>Unitree Go1 sensor platform — related DiCE Lab robotics work.</figcaption></figure>
+            <figure><img src="../assets/go1_side_view_2.jpg" alt="Unitree Go1 quadruped, side view"><figcaption>Go1 quadruped, side view — related DiCE Lab robotics work.</figcaption></figure>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <nav class="prevnext" aria-label="Project pages">
+      <a href="lark.html">← LARK</a>
+      <a href="famail.html">FAMAIL →</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      © 2026 Robert Ashe ·
+      <a href="https://github.com/nthPerson/Project-Portfolio" target="_blank" rel="noopener">View this site on GitHub</a>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>
