@@ -1,0 +1,88 @@
+/* ===== Robert Ashe — Portfolio styles ===== */
+/* Fonts loaded via <link> in each page's <head>. */
+
+:root {
+  /* Palette — "Parchment" */
+  --paper: #EDE8DD;
+  --ink: #2A3B4D;
+  --accent: #5E7E99;
+  --accent-dark: #4A6985;
+  --pale: #B9C4CC;
+  --muted: #6E6A5F;
+  --card: #F4F0E8;
+  --sidebar-bg: #E4DECF;
+  --border: #C9C2B2;
+  --circle-bg: #DCD5C6;
+
+  /* Typography */
+  --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+
+  /* Layout */
+  --maxw: 1080px;
+  --pad: clamp(1.1rem, 4vw, 2.5rem);
+  --radius: 10px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+}
+h1 { font-size: clamp(2.4rem, 6vw, 3.6rem); }
+h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+h3 { font-size: 1.4rem; }
+
+p { margin: 0 0 1rem; }
+
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { color: var(--ink); }
+
+img { max-width: 100%; height: auto; display: block; }
+
+/* Monospace technical label */
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* Layout helpers */
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--pad); }
+.section { padding: clamp(3rem, 8vw, 5.5rem) 0; }
+.section + .section { border-top: 1px solid var(--border); }
+
+.section-head { margin-bottom: 2.5rem; }
+.section-head .label { display: block; margin-bottom: 0.4rem; }
+
+/* Visible focus for keyboard users */
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Scroll-reveal — JS adds .is-visible */
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
