@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body id="top">
-  <nav class="site-nav">
+  <nav class="site-nav" aria-label="Primary">
     <div class="wrap">
       <a class="brand" href="../index.html">Robert Ashe</a>
       <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">MENU</button>
@@ -70,15 +70,15 @@
         <section>
           <span class="label">Architecture</span>
           <h2>Architecture</h2>
-          <div class="diagram" role="img" aria-label="LARK architecture: statements flow through a multi-agent ingestion pipeline and a RAG layer into normalized analysis.">
-            <div style="display:flex;align-items:center;justify-content:space-between;gap:0.6rem;flex-wrap:wrap;font-family:var(--font-mono);font-size:0.74rem;text-transform:uppercase;letter-spacing:0.06em">
-              <span style="background:var(--accent);color:var(--paper);padding:0.7rem 0.9rem;border-radius:6px">Raw statements<br>(any processor)</span>
-              <span style="color:var(--accent)">→</span>
-              <span style="background:var(--ink);color:var(--paper);padding:0.7rem 0.9rem;border-radius:6px">Multi-agent<br>extraction</span>
-              <span style="color:var(--accent)">→</span>
-              <span style="background:var(--ink);color:var(--paper);padding:0.7rem 0.9rem;border-radius:6px">RAG grounding<br>(interchange rules)</span>
-              <span style="color:var(--accent)">→</span>
-              <span style="background:var(--accent);color:var(--paper);padding:0.7rem 0.9rem;border-radius:6px">Normalized<br>analysis</span>
+          <div class="diagram">
+            <div class="diagram-flow" role="img" aria-label="LARK architecture: statements flow through a multi-agent ingestion pipeline and a RAG layer into normalized analysis.">
+              <span class="diagram-node is-accent">Raw statements<br>(any processor)</span>
+              <span class="diagram-arrow">→</span>
+              <span class="diagram-node is-ink">Multi-agent<br>extraction</span>
+              <span class="diagram-arrow">→</span>
+              <span class="diagram-node is-ink">RAG grounding<br>(interchange rules)</span>
+              <span class="diagram-arrow">→</span>
+              <span class="diagram-node is-accent">Normalized<br>analysis</span>
             </div>
           </div>
           <p>A multi-agent extraction pipeline parses each statement; a retrieval-augmented layer grounds agent reasoning in authoritative interchange rules and processor knowledge, so analysis cites real sources rather than hallucinating.</p>
@@ -119,7 +119,7 @@
       </div>
     </div>
 
-    <nav class="prevnext">
+    <nav class="prevnext" aria-label="Project pages">
       <a href="car-sounds.html">← Car Sounds</a>
       <a href="bim2rdt.html">BIM2RDT →</a>
     </nav>
