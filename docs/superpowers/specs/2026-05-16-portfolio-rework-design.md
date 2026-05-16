@@ -175,8 +175,8 @@ them into `assets/img/` and `assets/docs/`. File paths below are relative to
 
 **BIM2RDT** — DiCE Lab, co-author; paper 2025. Go1 photo reuse approved.
 - Sidebar: Stack agentic AI · BIM/IFC · LiDAR/IMU sensor fusion ·
-  Semantic-Gravity ICP; Status published; Links arXiv:2509.20705 (paper-source
-  link pending — see §11.3).
+  Semantic-Gravity ICP; Status published; Links — arXiv abstract
+  (`arxiv.org/abs/2509.20705`) and paper PDF (`arxiv.org/pdf/2509.20705`).
 - Provided images: `BIM2RDT/BIM2RDT_figure_1.png` (feature prominently — the
   paper's main system figure), `BIM2RDT_digital_twin_vs_simulated_real_world.png`
   (hero candidate), `BIM2RDT_SG-ICP.png` (SG-ICP before/after — the paper's
@@ -212,9 +212,10 @@ generated visuals.
 - Sidebar: Stack SWITRS/geospatial crash-data analysis · multivariate
   regression · propensity-score matching · Pupil Core eye tracking · EMOTIV
   EPOC X EEG · DriveSafety RS-250 · HyperDrive/TCL; Status ongoing research;
-  Links Caltrans Active Permitted Displays Map Viewer (URL pending — see §11.3).
+  Links — Caltrans Active Permitted Displays Map Viewer
+  (`caltrans.maps.arcgis.com/apps/webappviewer/index.html?id=f0bb9147535d49a4bd24099475883c15`).
 - Provided images: `caltrans_oda/caltrans_active_permit_arcGIS_screenshot.png`
-  (the public ArcGIS map viewer).
+  (the public ArcGIS map viewer; links to the live viewer above).
 - To generate during build (carry the page in place of confidential imagery):
   a crash-data analysis pipeline diagram (SWITRS/TSN/TCR → geospatial join →
   multivariate regression + propensity-score matching) and a study-design
@@ -346,16 +347,14 @@ On-brand diagrams in the Parchment palette, built as HTML/CSS/SVG:
 - BIM2RDT — optional simplified pipeline diagram (the provided Figure 1 may
   suffice on its own).
 
-### 11.3 Still needed from Robert (non-blocking)
+### 11.3 External links (all provided)
 
-- `project_content/BIM2RDT/BIM2RDT_paper_source_link.txt` is **empty**. The
-  arXiv abstract link (`arxiv.org/abs/2509.20705`) is known and will be used;
-  if a different "paper source" URL is intended (e.g., source files), provide
-  it.
-- `project_content/caltrans_oda/link_to_active_permit_arcGIS_site.txt` is
-  **empty**. The URL of the Caltrans Active Permitted Displays Map Viewer is
-  needed to make the provided screenshot a link; until then the screenshot is
-  shown without an outbound link.
+- BIM2RDT paper — arXiv abstract `https://arxiv.org/abs/2509.20705`; paper PDF
+  `https://arxiv.org/pdf/2509.20705`.
+- Caltrans Active Permitted Displays Map Viewer —
+  `https://caltrans.maps.arcgis.com/apps/webappviewer/index.html?id=f0bb9147535d49a4bd24099475883c15`
+  (the provided ArcGIS screenshot links here).
+- FAMAIL project site — `https://nthperson.github.io/FAMAIL/`.
 
 ### 11.4 Default / backup image handling
 
@@ -378,7 +377,5 @@ On-brand diagrams in the Parchment palette, built as HTML/CSS/SVG:
 - Final font selection (Newsreader / Inter / JetBrains Mono proposed).
 - Generated-diagram content for LARK, FAMAIL, Caltrans ODA, and Car Sounds —
   drafted during the build, reviewed by Robert before launch.
-- The two empty link files in §11.3 (BIM2RDT paper-source URL; Caltrans ArcGIS
-  Map Viewer URL) — non-blocking; sensible fallbacks defined.
 - EDL proposal PDF and presentation slides are hosted on-site for download
   (confirmed).
