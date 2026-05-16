@@ -105,15 +105,17 @@ Loaded via Google Fonts. Final font selection confirmed during implementation.
 
 Sections, top to bottom:
 
-1. **Hero** — headshot; "Robert Ashe"; `APPLIED AI ENGINEER · RESEARCHER ·
-   CO-FOUNDER`; one-line intro ("Building agentic systems and ML models that
-   bridge software and the physical world."); View Work + Download CV buttons;
-   email/LinkedIn/GitHub/arXiv links; "San Diego, CA".
+1. **Hero** — circular headshot (`RobertAshe_headshot_cropped_to_bust.jpg`);
+   "Robert Ashe"; `APPLIED AI ENGINEER · RESEARCHER · CO-FOUNDER`; one-line
+   intro ("Building agentic systems and ML models that bridge software and the
+   physical world."); View Work + Download CV buttons; email/LinkedIn/GitHub/
+   arXiv links; "San Diego, CA".
 2. **About** — rewritten present-day narrative replacing the old "dreamed of
    being a scientist" essay. Two short paragraphs: the software-meets-physical-
    world throughline; current M.S. Big Data Analytics (expected Spring 2027)
    and B.S. Computer Science (4.0 major GPA, summa cum laude). Retains a spark
-   of the original voice, modernized and sharper.
+   of the original voice, modernized and sharper. Includes the B.S. graduation
+   photo (`Graduation_with_Mom_Larry_Steven.jpg`) as a warm, personal image.
 3. **Featured Work** — 5 alternating rows linking to detail pages, in order:
    LARK · BIM2RDT · FAMAIL · Caltrans ODA · Car Sounds. The **BIM2RDT row's
    description explicitly teases the Evidential Deep Learning extension** so
@@ -148,33 +150,94 @@ All 5 detail pages share the two-column template:
   Stack` → `Gallery`.
 - **Footer:** previous / next project navigation.
 
-### 6.1 Featured project content
+### 6.1 Featured project content & assets
 
-- **LARK** — Co-Founder & Lead AI Engineer, Jan 2026–Present. Stack: Python,
-  multi-agent LLMs, RAG, REST APIs, multi-tenant SaaS. Status: shipping / in
-  active development. Links: "Private repository — demo available on request."
-  Content: multi-agent statement-ingestion pipeline, RAG over interchange
+Each entry lists narrative focus, sidebar facts, the provided images/documents
+to use, and any diagrams to generate. Source files are staged in
+`project_content/`; the build optimizes them (resize, compress) and copies
+them into `assets/img/` and `assets/docs/`. File paths below are relative to
+`project_content/`.
+
+**LARK** — Co-Founder & Lead AI Engineer, Jan 2026–Present.
+- Sidebar: Stack Python · multi-agent LLMs · RAG · REST APIs · multi-tenant
+  SaaS; Status shipping / active development; Links "Private repository —
+  demo available on request."
+- Narrative: multi-agent statement-ingestion pipeline, RAG over interchange
   rules, the "Sidekick" agent, branded proposal-PDF generation, portfolio
   analytics, multi-tenant admin/RBAC, Echelon Payments integration.
-- **BIM2RDT** — DiCE Lab, co-author; paper 2025. Stack: agentic AI, BIM/IFC,
-  LiDAR/IMU sensor fusion, Semantic-Gravity ICP. Links: arXiv:2509.20705.
-  Includes a **Current Research** block on the sole-authored extension,
-  "Uncertainty-Aware Scan-to-BIM via Evidential Deep Learning" (CONE 652
-  proposal, May 2026) — the proposal PDF is linked as a download. The block
-  explains the gap it closes (calibrated decision layer for autonomous IFC
-  updates), which BIM2RDT explicitly left as future work.
-- **FAMAIL** — RA, PI Dr. Xin Zhang, Aug 2025–Present. Stack: PyTorch,
-  imitation learning, fairness/bias mitigation, spatial-temporal augmentation,
-  HPC. Links: public `FAMAIL` GitHub repo. Highlight: cut augmentation runtime
-  from 16 days (CPU) to 39 minutes via CPU/GPU workload partitioning.
-- **Caltrans ODA** — DiCE Lab, lead developer, Caltrans contract 65A1302.
-  Stack: SWITRS/geospatial crash-data analysis, multivariate regression,
-  propensity-score matching, Pupil Core eye tracking, EMOTIV EPOC X EEG,
-  DriveSafety RS-250, HyperDrive/TCL. Status: ongoing research.
-- **Car Sounds (DS-CNN / TinyML)** — Graduate ML/TinyML coursework. Stack:
-  PyTorch/TensorFlow, depthwise-separable CNN, mel-spectrograms, post-training
-  quantization, Arduino Nano 33 BLE Sense Rev2. Links: public
-  `Car_Sounds_Classification` GitHub repo.
+- Provided images (clean, publishable): `lark/screenshot_homepage_desktop.png`
+  (hero), `screenshot_documents_desktop.png`, `screenshot_analysis_desktop.png`
+  + `screenshot_analysis_mobile.png`, `screenshot_sidekick_desktop.png` +
+  `screenshot_sidekick_mobile.png`. Desktop shots anchor sections; each
+  desktop/mobile pair shown together demonstrates responsive design.
+- To generate during build: a conceptual multi-agent ingestion + RAG
+  architecture diagram (system-level, no proprietary detail).
+
+**BIM2RDT** — DiCE Lab, co-author; paper 2025. Go1 photo reuse approved.
+- Sidebar: Stack agentic AI · BIM/IFC · LiDAR/IMU sensor fusion ·
+  Semantic-Gravity ICP; Status published; Links arXiv:2509.20705 (paper-source
+  link pending — see §11.3).
+- Provided images: `BIM2RDT/BIM2RDT_figure_1.png` (feature prominently — the
+  paper's main system figure), `BIM2RDT_digital_twin_vs_simulated_real_world.png`
+  (hero candidate), `BIM2RDT_SG-ICP.png` (SG-ICP before/after — the paper's
+  headline contribution), `BIM2RDT_HAV_monitoring.png` (worker hand-arm-
+  vibration monitoring chart). Existing `assets/` Go1 quadruped photos may
+  supplement the hero/gallery, captioned as related DiCE Lab robotics work.
+- **Current Research block** — "Uncertainty-Aware Scan-to-BIM via Evidential
+  Deep Learning" (CONE 652, May 2026, sole-authored). Explains the gap it
+  closes (a calibrated decision layer for autonomous IFC updates) that BIM2RDT
+  left as future work. Feature `edl_digital_twins/Figure_1.png` prominently;
+  include `decision_map_uncertainty_discrepancy_plane.png`. Downloadable from
+  this section: `CON_E_652__Final_Project_Proposal.pdf` (proposal) and
+  `CONE652_FinalProject_Presentation_RobertAshe_v2.pdf` (presentation slides).
+
+**FAMAIL** — RA, PI Dr. Xin Zhang, Aug 2025–Present.
+- Sidebar: Stack PyTorch · imitation learning · fairness/bias mitigation ·
+  spatial-temporal augmentation · HPC; Status ongoing research; Links public
+  `FAMAIL` GitHub repo + dedicated project site
+  `https://nthperson.github.io/FAMAIL/`.
+- Highlight: cut augmentation runtime from 16 days (CPU) to 39 minutes via
+  CPU/GPU workload partitioning.
+- Provided images: `famail/screenshot_trajectory_modification_dashboard.png`
+  (dark-mode, two heatmaps — hero candidate),
+  `screenshot_causal_fairness_term_dashboard.png`,
+  `screenshot_objective_function_dashboard_light.png`,
+  `screenshot_causal_fairness_temporal_patterns_line_graphs.png`.
+- To generate during build: a spatial-temporal augmentation pipeline /
+  methodology diagram.
+
+**Caltrans ODA** — DiCE Lab, lead developer, Caltrans contract 65A1302.
+Project materials are largely confidential — this page leans most heavily on
+generated visuals.
+- Sidebar: Stack SWITRS/geospatial crash-data analysis · multivariate
+  regression · propensity-score matching · Pupil Core eye tracking · EMOTIV
+  EPOC X EEG · DriveSafety RS-250 · HyperDrive/TCL; Status ongoing research;
+  Links Caltrans Active Permitted Displays Map Viewer (URL pending — see §11.3).
+- Provided images: `caltrans_oda/caltrans_active_permit_arcGIS_screenshot.png`
+  (the public ArcGIS map viewer).
+- To generate during build (carry the page in place of confidential imagery):
+  a crash-data analysis pipeline diagram (SWITRS/TSN/TCR → geospatial join →
+  multivariate regression + propensity-score matching) and a study-design
+  methodology diagram (driving simulator + eye-tracking + EEG).
+
+**Car Sounds (DS-CNN / TinyML)** — Graduate ML/TinyML coursework. A flagship
+project — it showcases AI/ML, data, and hardware skills together. The page
+should feature most/all provided figures and offer the report for download.
+- Sidebar: Stack PyTorch/TensorFlow · depthwise-separable CNN · mel-spectrograms
+  · post-training quantization · Arduino Nano 33 BLE Sense Rev2; Status complete
+  (M.S. coursework); Links public `Car_Sounds_Classification` GitHub repo.
+- Provided images: `car_sounds/car_sounds_deployed_hardware_under_hood_and_in_cabin.png`
+  (hero — the physical deployment), `car_sounds_log_mel-spectrograms.png`,
+  `car_sounds_classification_accuracy_bar_chart_all_models.png`,
+  `car_sounds_accuracy_vs_model_size_scatterplot.png`,
+  `car_sounds_data_augmentation_ablation_bar_chart.png`,
+  `car_sounds_quantization_impact_bar_chart.png`,
+  `car_sounds_classification_cycle_latency_breakdown_bar_and_pie_chart.png`,
+  `car_sounds_hardware_resource_utilization_stacked_bar_chart.png`. Used across
+  the Architecture / Highlights / Gallery sections as a results showcase.
+- Downloadable: `Car_Sounds_Final_Report.pdf`.
+- To generate during build: a DS-CNN pipeline diagram (audio capture →
+  mel-spectrogram → DS-CNN → post-training quantization → on-device inference).
 
 ## 7. LARK Showcase Strategy (Proprietary-Safe)
 
@@ -220,10 +283,17 @@ js/
   main.js               Mobile nav toggle, subtle scroll-reveal
 assets/
   img/                  Headshot, project visuals, diagrams, screenshots
-  robert-ashe-cv.pdf    Downloadable resume
+  docs/                 Downloadable PDFs (CV, EDL proposal + slides,
+                        Car Sounds report)
   favicon
+project_content/        Source-of-truth staging area for Robert's raw assets
+                        (not linked from the deployed site)
 docs/superpowers/specs/ This design doc
 ```
+
+- Build-time image optimization is required: resize images to sensible display
+  dimensions and compress them. The 8.8 MB source headshot in particular must
+  be reduced; large PNG screenshots/figures should be optimized for web.
 
 - Semantic HTML5 (`header`, `nav`, `main`, `section`, `article`, `footer`).
 - CSS: design tokens as custom properties; mobile-first responsive; alternating
@@ -240,14 +310,61 @@ docs/superpowers/specs/ This design doc
 - Per-page `<title>`, meta description, Open Graph / Twitter Card tags, favicon.
 - Mobile-first; verified at common breakpoints.
 
-## 11. Assets Required From Robert
+## 11. Asset Inventory & Handling
 
-- Professional headshot (provided).
-- Clean LARK UI screenshots (Homepage, document analysis, Sidekick, others).
-- Up-to-date CV PDF for download (current: the SDSU AI/Robotics/Construction
-  resume).
-- Confirmation/links for project visuals (BIM2RDT, FAMAIL, Caltrans, Car
-  Sounds) — existing repo assets or new images.
+All source materials are staged in `project_content/` (not part of the
+deployed site's linked pages). During the build, images are optimized (resized
+and compressed) and copied into `assets/img/`; PDFs into `assets/docs/`.
+
+### 11.1 Provided assets
+
+**People / general**
+- Hero headshot — `pics_of_robert/RobertAshe_headshot_cropped_to_bust.jpg`
+  (head-and-shoulders crop; preferred for the hero).
+- Full headshot — `pics_of_robert/RobertAshe_headshot.jpg` (alternate /
+  backup).
+- About-section photo — `pics_of_robert/Graduation_with_Mom_Larry_Steven.jpg`
+  (B.S. graduation; warm and personal).
+- CV download — `current_cv/Robert_Ashe_resume_Spring_2026.pdf`.
+
+**Per project** — placement detailed in §6.1:
+- LARK — 6 UI screenshots (3 desktop, 1 documents, analysis + sidekick
+  desktop/mobile pairs).
+- BIM2RDT — 4 paper figures + EDL extension: 2 figures and 2 PDFs.
+- FAMAIL — 4 dashboard screenshots + external project site link.
+- Caltrans ODA — 1 ArcGIS map-viewer screenshot.
+- Car Sounds — 8 result figures + 1 report PDF.
+
+### 11.2 To generate during the build (no source files needed)
+
+On-brand diagrams in the Parchment palette, built as HTML/CSS/SVG:
+- LARK — multi-agent ingestion + RAG architecture diagram.
+- FAMAIL — spatial-temporal augmentation pipeline / methodology diagram.
+- Caltrans ODA — crash-data analysis pipeline + study-design methodology
+  diagrams (this page depends on them most).
+- Car Sounds — DS-CNN pipeline diagram.
+- BIM2RDT — optional simplified pipeline diagram (the provided Figure 1 may
+  suffice on its own).
+
+### 11.3 Still needed from Robert (non-blocking)
+
+- `project_content/BIM2RDT/BIM2RDT_paper_source_link.txt` is **empty**. The
+  arXiv abstract link (`arxiv.org/abs/2509.20705`) is known and will be used;
+  if a different "paper source" URL is intended (e.g., source files), provide
+  it.
+- `project_content/caltrans_oda/link_to_active_permit_arcGIS_site.txt` is
+  **empty**. The URL of the Caltrans Active Permitted Displays Map Viewer is
+  needed to make the provided screenshot a link; until then the screenshot is
+  shown without an outbound link.
+
+### 11.4 Default / backup image handling
+
+- Each project hero has a fallback: if its image is missing or fails to load,
+  render an on-brand "title card" — a solid `--ink` or `--accent` block with
+  the project name in monospace (as in the approved layout mockups).
+- All images carry descriptive `alt` text.
+- Provided figures that are charts/plots get short captions so they read
+  clearly outside their original paper context.
 
 ## 12. Out of Scope
 
@@ -259,7 +376,9 @@ docs/superpowers/specs/ This design doc
 ## 13. Open Items to Confirm During Implementation
 
 - Final font selection (Newsreader / Inter / JetBrains Mono proposed).
-- Architecture-diagram content for LARK and BIM2RDT (drafted during build,
-  reviewed by Robert).
-- Exact project visuals for non-LARK detail pages.
-- Whether the EDL proposal PDF is hosted on-site for download (assumed yes).
+- Generated-diagram content for LARK, FAMAIL, Caltrans ODA, and Car Sounds —
+  drafted during the build, reviewed by Robert before launch.
+- The two empty link files in §11.3 (BIM2RDT paper-source URL; Caltrans ArcGIS
+  Map Viewer URL) — non-blocking; sensible fallbacks defined.
+- EDL proposal PDF and presentation slides are hosted on-site for download
+  (confirmed).
