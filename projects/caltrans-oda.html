@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caltrans ODA — Traffic Safety Study — Robert Ashe</title>
+  <meta name="description" content="Caltrans ODA — a study of how outdoor advertising displays affect driver distraction and traffic safety; lead developer Robert Ashe.">
+  <meta property="og:title" content="Caltrans ODA — Traffic Safety Study — Robert Ashe">
+  <meta property="og:description" content="How outdoor advertising displays affect driver distraction and traffic safety.">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body id="top">
+  <nav class="site-nav" aria-label="Primary">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Robert Ashe</a>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">MENU</button>
+      <ul class="nav-links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#featured-work">Work</a></li>
+        <li><a href="../index.html#publications">Publications</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <a class="crumb" href="../index.html#featured-work">← Back to Work</a>
+
+    <header class="detail-header">
+      <span class="label">Crash-Data Analysis · Lead Developer · 2024–</span>
+      <h1>Caltrans ODA — Traffic Safety Study</h1>
+      <p class="tagline">How outdoor advertising displays affect driver distraction and traffic safety.</p>
+    </header>
+
+    <div class="detail-hero">
+      <img src="../assets/img/caltrans-arcgis.png" alt="Caltrans Active Permitted Displays ArcGIS map viewer">
+    </div>
+
+    <div class="detail-layout">
+      <aside class="detail-sidebar">
+        <dl>
+          <dt>Role</dt><dd>Lead Developer — SDSU DiCE Lab</dd>
+          <dt>Timeline</dt><dd>2024 – Present</dd>
+          <dt>Stack</dt><dd>SWITRS/geospatial analysis · Multivariate regression · Propensity-score matching · Pupil Core · EMOTIV EPOC X · DriveSafety RS-250</dd>
+          <dt>Status</dt><dd>Ongoing research</dd>
+          <dt>Links</dt>
+          <dd>
+            <a href="https://caltrans.maps.arcgis.com/apps/webappviewer/index.html?id=f0bb9147535d49a4bd24099475883c15" target="_blank" rel="noopener">Active Permitted Displays Map Viewer</a>
+          </dd>
+        </dl>
+      </aside>
+      <div class="detail-main">
+        <section>
+          <span class="label">The Problem</span>
+          <h2>The problem</h2>
+          <p>Outdoor advertising displays — static billboards and digital signs — line California highways. Whether, and how much, they distract drivers and affect collision rates is a question with real public-safety stakes and no easy answer: traffic volume, road geometry, weather, and time of day all confound the signal.</p>
+        </section>
+
+        <section>
+          <span class="label">What I Built</span>
+          <h2>What I built</h2>
+          <p>I'm lead developer on a Caltrans-funded research contract (65A1302) studying the impact of outdoor advertising displays on traffic safety. I built crash-data analysis pipelines over SWITRS records, TSN, and Traffic Collision Reports, using geospatial joins to associate collisions with display locations along California highway segments.</p>
+        </section>
+
+        <section>
+          <span class="label">Architecture</span>
+          <h2>Architecture</h2>
+          <div class="diagram">
+            <div class="diagram-flow" role="img" aria-label="Caltrans crash-data pipeline: SWITRS, TSN, and Traffic Collision Report data are joined geospatially to display locations, then analyzed with regression and propensity-score matching.">
+              <span class="diagram-node is-accent">SWITRS · TSN · TCR<br>crash data</span>
+              <span class="diagram-arrow">→</span>
+              <span class="diagram-node is-ink">Geospatial join<br>to displays</span>
+              <span class="diagram-arrow">→</span>
+              <span class="diagram-node is-ink">Regression +<br>propensity matching</span>
+              <span class="diagram-arrow">→</span>
+              <span class="diagram-node is-accent">Isolated<br>display effect</span>
+            </div>
+          </div>
+          <p>The pipeline ingests heterogeneous crash datasets, joins them geospatially to permitted-display locations, and applies statistical methods that isolate the display effect from confounders. The public Caltrans Active Permitted Displays Map Viewer, shown above, is the authoritative source for display locations.</p>
+        </section>
+
+        <section>
+          <span class="label">Study Design</span>
+          <h2>Study design</h2>
+          <p>Beyond the observational crash-data study, the project includes a controlled driving-simulator experiment that combines eye-tracking and EEG to measure driver distraction directly.</p>
+          <div class="diagram">
+            <div class="diagram-flow" role="img" aria-label="Driving-simulator study design: DriveSafety RS-250 scenarios are measured with eye tracking and EEG to quantify driver distraction.">
+              <span class="diagram-node is-ink">DriveSafety RS-250<br>scenarios (TCL)</span>
+              <span class="diagram-arrow">→</span>
+              <span class="diagram-node is-accent">Pupil Core<br>eye tracking</span>
+              <span class="diagram-node is-accent">EMOTIV EPOC X<br>EEG</span>
+              <span class="diagram-arrow">→</span>
+              <span class="diagram-node is-ink">Distraction<br>metrics</span>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <span class="label">Highlights</span>
+          <h2>Highlights</h2>
+          <ul class="highlights">
+            <li>Built crash-data pipelines over SWITRS, TSN, and Traffic Collision Report datasets.</li>
+            <li>Geospatial joins associate collisions with outdoor-display locations along highway segments.</li>
+            <li>Applied multivariate regression and propensity-score matching to isolate the display effect from traffic volume, road geometry, weather, and time of day.</li>
+            <li>Contributed to a driving-simulator experiment design on the DriveSafety RS-250, scripting scenarios in HyperDrive TCL.</li>
+            <li>Helped define analysis plans for eye-tracking (Pupil Core) and EEG (EMOTIV EPOC X) data.</li>
+          </ul>
+        </section>
+
+        <section>
+          <span class="label">Tech Stack</span>
+          <h2>Tech stack</h2>
+          <p>SWITRS / geospatial crash-data analysis · multivariate regression · propensity-score matching · Pupil Core eye tracker · EMOTIV EPOC X 14 EEG · DriveSafety RS-250 simulator · HyperDrive TCL scripting · Python (NumPy/Pandas).</p>
+        </section>
+
+        <section>
+          <span class="label">Gallery</span>
+          <h2>Gallery</h2>
+          <p>Most project materials are confidential. The public-facing artifact is the Caltrans Active Permitted Displays Map Viewer.</p>
+          <figure>
+            <a href="https://caltrans.maps.arcgis.com/apps/webappviewer/index.html?id=f0bb9147535d49a4bd24099475883c15" target="_blank" rel="noopener">
+              <img src="../assets/img/caltrans-arcgis.png" alt="Caltrans Active Permitted Displays Map Viewer, an ArcGIS web app">
+            </a>
+            <figcaption>Caltrans Active Permitted Displays Map Viewer (public ArcGIS app).</figcaption>
+          </figure>
+        </section>
+      </div>
+    </div>
+
+    <nav class="prevnext" aria-label="Project pages">
+      <a href="famail.html">← FAMAIL</a>
+      <a href="car-sounds.html">Car Sounds →</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      © 2026 Robert Ashe ·
+      <a href="https://github.com/nthPerson/Project-Portfolio" target="_blank" rel="noopener">View this site on GitHub</a>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>
