@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LARK Business Services — Robert Ashe</title>
+  <meta name="description" content="LARK — an AI-native, multi-agent document-ingestion and RAG platform for merchant card processing, architected by Robert Ashe.">
+  <meta property="og:title" content="LARK Business Services — Robert Ashe">
+  <meta property="og:description" content="An AI-native, multi-agent document-ingestion and RAG platform for merchant card processing.">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body id="top">
+  <nav class="site-nav">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Robert Ashe</a>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">MENU</button>
+      <ul class="nav-links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#featured-work">Work</a></li>
+        <li><a href="../index.html#publications">Publications</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <a class="crumb" href="../index.html#featured-work">← Back to Work</a>
+
+    <header class="detail-header">
+      <span class="label">Multi-Agent · RAG · Co-Founder · 2026</span>
+      <h1>LARK Business Services</h1>
+      <p class="tagline">An AI-native platform for merchant card processing professionals.</p>
+    </header>
+
+    <div class="detail-hero">
+      <img src="../assets/img/lark-homepage.png" alt="LARK platform dashboard">
+    </div>
+
+    <div class="detail-layout">
+      <aside class="detail-sidebar">
+        <dl>
+          <dt>Role</dt><dd>Co-Founder &amp; Lead AI Engineer</dd>
+          <dt>Timeline</dt><dd>Jan 2026 – Present</dd>
+          <dt>Stack</dt><dd>Python · Multi-agent LLMs · RAG · REST APIs · Multi-tenant SaaS</dd>
+          <dt>Status</dt><dd>Shipping — in active development</dd>
+          <dt>Links</dt><dd>Private repository — demo available on request</dd>
+        </dl>
+      </aside>
+      <div class="detail-main">
+        <section>
+          <span class="label">The Problem</span>
+          <h2>The problem</h2>
+          <p>Merchant card processing statements arrive in dozens of incompatible formats, one per processor. Sales professionals reconcile them by hand to find interchange optimizations, downgrades, and the true effective rate a merchant pays. It is slow, error-prone work that does not scale.</p>
+        </section>
+
+        <section>
+          <span class="label">What I Built</span>
+          <h2>What I built</h2>
+          <p>As co-founder and lead AI engineer I architected and built all of LARK's AI/ML systems and core backend. The platform normalizes statements from disparate processors into a single schema, then runs downstream analysis for interchange optimization, downgrade detection, and effective-rate calculation.</p>
+          <p>On top of that foundation I built "Sidekick" — an AI agent for sales professionals that handles proposal preparation, portfolio analytics, and statement Q&amp;A — along with branded sales-proposal PDF generation, a portfolio analytics module, and a full suite of multi-tenant administrative features (ISO/agent management, role-based access control, and user provisioning). I am currently leading the integration with Echelon Payments.</p>
+        </section>
+
+        <section>
+          <span class="label">Architecture</span>
+          <h2>Architecture</h2>
+          <div class="diagram" role="img" aria-label="LARK architecture: statements flow through a multi-agent ingestion pipeline and a RAG layer into normalized analysis.">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:0.6rem;flex-wrap:wrap;font-family:var(--font-mono);font-size:0.74rem;text-transform:uppercase;letter-spacing:0.06em">
+              <span style="background:var(--accent);color:var(--paper);padding:0.7rem 0.9rem;border-radius:6px">Raw statements<br>(any processor)</span>
+              <span style="color:var(--accent)">→</span>
+              <span style="background:var(--ink);color:var(--paper);padding:0.7rem 0.9rem;border-radius:6px">Multi-agent<br>extraction</span>
+              <span style="color:var(--accent)">→</span>
+              <span style="background:var(--ink);color:var(--paper);padding:0.7rem 0.9rem;border-radius:6px">RAG grounding<br>(interchange rules)</span>
+              <span style="color:var(--accent)">→</span>
+              <span style="background:var(--accent);color:var(--paper);padding:0.7rem 0.9rem;border-radius:6px">Normalized<br>analysis</span>
+            </div>
+          </div>
+          <p>A multi-agent extraction pipeline parses each statement; a retrieval-augmented layer grounds agent reasoning in authoritative interchange rules and processor knowledge, so analysis cites real sources rather than hallucinating.</p>
+          <figure>
+            <img src="../assets/img/lark-documents.png" alt="LARK document ingestion and analysis workspace">
+            <figcaption>Document ingestion and analysis workspace.</figcaption>
+          </figure>
+        </section>
+
+        <section>
+          <span class="label">Highlights</span>
+          <h2>Highlights</h2>
+          <ul class="highlights">
+            <li>Multi-agent pipeline normalizes statements across all major processors into one schema.</li>
+            <li>RAG over interchange rules grounds agent reasoning in authoritative sources.</li>
+            <li>Sidekick agent ships proposal prep, portfolio analytics, and document Q&amp;A.</li>
+            <li>Multi-tenant admin with role-based access control and user provisioning.</li>
+          </ul>
+        </section>
+
+        <section>
+          <span class="label">Tech Stack</span>
+          <h2>Tech stack</h2>
+          <p>Python · multi-agent LLM orchestration · retrieval-augmented generation · REST APIs · multi-tenant SaaS architecture · branded PDF generation.</p>
+        </section>
+
+        <section>
+          <span class="label">Gallery</span>
+          <h2>Gallery</h2>
+          <p>LARK is fully responsive — the same workflows on desktop and mobile.</p>
+          <div class="gallery">
+            <figure><img src="../assets/img/lark-analysis-desktop.png" alt="LARK analysis view on desktop"><figcaption>Analysis view — desktop.</figcaption></figure>
+            <figure><img src="../assets/img/lark-sidekick-desktop.png" alt="LARK Sidekick AI agent on desktop"><figcaption>Sidekick AI agent — desktop.</figcaption></figure>
+            <figure><img src="../assets/img/lark-analysis-mobile.png" alt="LARK analysis view on mobile"><figcaption>Analysis — mobile.</figcaption></figure>
+            <figure><img src="../assets/img/lark-sidekick-mobile.png" alt="LARK Sidekick on mobile"><figcaption>Sidekick — mobile.</figcaption></figure>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <nav class="prevnext">
+      <a href="car-sounds.html">← Car Sounds</a>
+      <a href="bim2rdt.html">BIM2RDT →</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      © 2026 Robert Ashe ·
+      <a href="https://github.com/nthPerson/Project-Portfolio" target="_blank" rel="noopener">View this site on GitHub</a>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>
