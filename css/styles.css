@@ -149,9 +149,10 @@ a:focus-visible, button:focus-visible {
   text-transform: uppercase; color: var(--muted); margin-top: 1.2rem; }
 
 /* ===== About ===== */
-.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; }
-.about-photo { border-radius: var(--radius); border: 1px solid var(--border); }
+/* Text spans the full content width; the photo stays at a smaller, centered fixed size. */
+.about-text p { text-align: justify; }
 .about-text p:last-child { margin-bottom: 0; }
+.about-photo { border-radius: var(--radius); border: 1px solid var(--border); margin: 1.6rem auto; max-width: 680px; }
 
 /* ===== Featured Work — alternating rows ===== */
 .feature-row {
@@ -304,7 +305,6 @@ figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 0.5rem; font-s
   .nav-links a { padding: 0.8rem var(--pad); width: 100%; }
 
   /* Single-column stacks */
-  .about-grid { grid-template-columns: 1fr; gap: 1.6rem; }
   .feature-row { grid-template-columns: 1fr; gap: 1.2rem; margin-bottom: 2.6rem; }
   .feature-row:nth-child(even) .feature-visual { order: 0; }
   .more-projects { grid-template-columns: 1fr; }

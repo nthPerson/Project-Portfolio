@@ -830,7 +830,7 @@ Use BLOCK A, then `<body id="top">`, then BLOCK B, then `<main>` containing the 
         <div class="section-head"><span class="label">About</span></div>
         <div class="about-grid reveal">
           <div class="about-text">
-            <p>I'm an applied AI engineer and researcher who builds systems where software meets the physical world — agentic AI pipelines, machine-learning models, and the robotics and edge hardware they run on. I co-authored <strong>BIM2RDT</strong>, an agentic AI safety-first framework that turns building information models into robot-ready site digital twins, and I co-founded <strong>LARK Business Services</strong>, where I architected a multi-agent document-ingestion platform for the merchant card processing industry.</p>
+            <p>I'm an applied AI engineer and researcher who builds systems where software meets the physical world — agentic AI pipelines, machine-learning models, and the robotics and edge hardware they run on. I co-authored <strong>BIM2RDT</strong>, an agentic AI safety-first framework that turns building information models into robot-ready site digital twins, and I co-founded <strong>LARK Analysis Services</strong>, where I architected a multi-agent document-ingestion platform for the merchant card processing industry.</p>
             <p>I'm pursuing an M.S. in Big Data Analytics at San Diego State University (expected Spring 2027), after completing my B.S. in Computer Science there with a 4.0 major GPA, summa cum laude. I work as a research assistant in two SDSU labs — the Data-informed Construction Engineering (DiCE) Lab and the FAMAIL fairness-aware imitation-learning project. The throughline across all of it is the same: I like taking hard, ambiguous problems and turning them into systems that work.</p>
           </div>
           <img class="about-photo" src="assets/img/graduation.jpg"
@@ -894,7 +894,7 @@ Replace `<!-- Task 8: Featured Work -->` in `index.html` with:
       </div>
       <div class="feature-text">
         <span class="label">01 · Multi-Agent · RAG · Co-Founder</span>
-        <h3>LARK Business Services</h3>
+        <h3>LARK Analysis Services</h3>
         <p>An AI-native platform for merchant card processing professionals — a multi-agent document-ingestion pipeline and RAG-grounded analysis engine I architected as co-founder and lead AI engineer.</p>
         <a class="feature-link" href="projects/lark.html">Read the case study →</a>
       </div>
@@ -1021,7 +1021,7 @@ Replace `<!-- Task 9: Publications, Experience, More Projects, Contact -->` with
       <li>
         <div class="when">Jan 2026 — Present</div>
         <div>
-          <div class="role-title">Co-Founder &amp; Lead AI Engineer — LARK Business Services</div>
+          <div class="role-title">Co-Founder &amp; Lead AI Engineer — LARK Analysis Services</div>
           <div class="org">AI-native platform for merchant card processing professionals</div>
           <p>Architected the multi-agent document-ingestion pipeline, RAG systems, the "Sidekick" agent, and multi-tenant admin features.</p>
         </div>
@@ -1169,7 +1169,7 @@ Reference spec §6.1 (LARK) and §7 (LARK proprietary-safe strategy). **No repo 
 
 - [ ] **Step 1: Create `projects/lark.html`**
 
-Build the full page from the DETAIL TEMPLATE. `<title>`: "LARK Business Services — Robert Ashe". `<meta description>`: "LARK — an AI-native, multi-agent document-ingestion and RAG platform for merchant card processing, architected by Robert Ashe."
+Build the full page from the DETAIL TEMPLATE. `<title>`: "LARK Analysis Services — Robert Ashe". `<meta description>`: "LARK — an AI-native, multi-agent document-ingestion and RAG platform for merchant card processing, architected by Robert Ashe."
 
 - Eyebrow: `Multi-Agent · RAG · Co-Founder · 2026`
 - Tagline: "An AI-native platform for merchant card processing professionals."
