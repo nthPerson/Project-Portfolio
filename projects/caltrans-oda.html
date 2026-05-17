@@ -30,6 +30,25 @@
     </div>
   </nav>
 
+  <!--
+  Section navigation — scroll-spy. To try a different visual style,
+  swap the modifier class on the <nav> below:
+    section-nav--labels  — always-visible text labels (default)
+    section-nav--dots    — minimal dots; label appears on hover / current
+    section-nav--rail    — tick lines; label appears on hover / current
+-->
+<nav class="section-nav section-nav--labels" aria-label="Section navigation">
+  <ul>
+    <li><a href="#problem"><span class="marker" aria-hidden="true"></span><span class="label-text">Problem</span></a></li>
+    <li><a href="#what-i-built"><span class="marker" aria-hidden="true"></span><span class="label-text">What I Built</span></a></li>
+    <li><a href="#architecture"><span class="marker" aria-hidden="true"></span><span class="label-text">Architecture</span></a></li>
+    <li><a href="#study-design"><span class="marker" aria-hidden="true"></span><span class="label-text">Study Design</span></a></li>
+    <li><a href="#highlights"><span class="marker" aria-hidden="true"></span><span class="label-text">Highlights</span></a></li>
+    <li><a href="#tech-stack"><span class="marker" aria-hidden="true"></span><span class="label-text">Tech Stack</span></a></li>
+    <li><a href="#gallery"><span class="marker" aria-hidden="true"></span><span class="label-text">Gallery</span></a></li>
+  </ul>
+</nav>
+
   <main class="wrap">
     <a class="crumb" href="../index.html#featured-work">← Back to Work</a>
 
@@ -53,13 +72,13 @@
         </dl>
       </aside>
       <div class="detail-main">
-        <section>
+        <section id="problem">
           <span class="label">The Problem</span>
           <h2>The problem</h2>
           <p>Outdoor advertising displays — static billboards and digital signs — line California highways. Whether, and how much, they distract drivers and affect collision rates is a question with real public-safety stakes and no easy answer: traffic volume, road geometry, weather, and time of day all confound the signal.</p>
         </section>
 
-        <section>
+        <section id="what-i-built">
           <span class="label">What I Built</span>
           <h2>What I built</h2>
           <p>I'm lead developer on a Caltrans-funded research contract (65A1302) studying the impact of outdoor advertising displays on traffic safety. I built crash-data analysis pipelines over SWITRS records, TSN, and Traffic Collision Reports, using geospatial joins to associate collisions with display locations along California highway segments.</p>
@@ -69,7 +88,7 @@
           <img src="../assets/img/caltrans-arcgis.png" alt="Caltrans Active Permitted Displays ArcGIS map viewer">
         </div>
 
-        <section>
+        <section id="architecture">
           <span class="label">Architecture</span>
           <h2>Architecture</h2>
           <div class="diagram">
@@ -86,7 +105,7 @@
           <p>The pipeline ingests heterogeneous crash datasets, joins them geospatially to permitted-display locations, and applies statistical methods that isolate the display effect from confounders. The public Caltrans Active Permitted Displays Map Viewer, shown above, is the authoritative source for display locations.</p>
         </section>
 
-        <section>
+        <section id="study-design">
           <span class="label">Study Design</span>
           <h2>Study design</h2>
           <p>Beyond the observational crash-data study, the project includes a controlled driving-simulator experiment that combines eye-tracking and EEG to measure driver distraction directly.</p>
@@ -102,7 +121,7 @@
           </div>
         </section>
 
-        <section>
+        <section id="highlights">
           <span class="label">Highlights</span>
           <h2>Highlights</h2>
           <ul class="highlights">
@@ -114,13 +133,13 @@
           </ul>
         </section>
 
-        <section>
+        <section id="tech-stack">
           <span class="label">Tech Stack</span>
           <h2>Tech stack</h2>
           <p>SWITRS / geospatial crash-data analysis · multivariate regression · propensity-score matching · Pupil Core eye tracker · EMOTIV EPOC X 14 EEG · DriveSafety RS-250 simulator · HyperDrive TCL scripting · Python (NumPy/Pandas).</p>
         </section>
 
-        <section>
+        <section id="gallery">
           <span class="label">Gallery</span>
           <h2>Gallery</h2>
           <p>Most project materials are confidential. The public-facing artifact is the Caltrans Active Permitted Displays Map Viewer.</p>

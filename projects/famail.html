@@ -30,6 +30,24 @@
     </div>
   </nav>
 
+  <!--
+  Section navigation — scroll-spy. To try a different visual style,
+  swap the modifier class on the <nav> below:
+    section-nav--labels  — always-visible text labels (default)
+    section-nav--dots    — minimal dots; label appears on hover / current
+    section-nav--rail    — tick lines; label appears on hover / current
+-->
+<nav class="section-nav section-nav--labels" aria-label="Section navigation">
+  <ul>
+    <li><a href="#problem"><span class="marker" aria-hidden="true"></span><span class="label-text">Problem</span></a></li>
+    <li><a href="#what-i-built"><span class="marker" aria-hidden="true"></span><span class="label-text">What I Built</span></a></li>
+    <li><a href="#architecture"><span class="marker" aria-hidden="true"></span><span class="label-text">Architecture</span></a></li>
+    <li><a href="#highlights"><span class="marker" aria-hidden="true"></span><span class="label-text">Highlights</span></a></li>
+    <li><a href="#tech-stack"><span class="marker" aria-hidden="true"></span><span class="label-text">Tech Stack</span></a></li>
+    <li><a href="#gallery"><span class="marker" aria-hidden="true"></span><span class="label-text">Gallery</span></a></li>
+  </ul>
+</nav>
+
   <main class="wrap">
     <a class="crumb" href="../index.html#featured-work">← Back to Work</a>
 
@@ -54,13 +72,13 @@
         </dl>
       </aside>
       <div class="detail-main">
-        <section>
+        <section id="problem">
           <span class="label">The Problem</span>
           <h2>The problem</h2>
           <p>Imitation-learning models trained on human-generated trajectories inherit human bias — and can amplify it. In urban mobility, behavioral cloning from taxi GPS data can entrench inequitable service patterns if left unchecked.</p>
         </section>
 
-        <section>
+        <section id="what-i-built">
           <span class="label">What I Built</span>
           <h2>What I built</h2>
           <p>I'm developing a spatial-temporal data augmentation framework for taxi GPS trajectories that mitigates the propagation and amplification of human bias. I design PyTorch augmentation operators that perturb spatial-temporal features while preserving task-relevant structure, yielding fairer multi-agent imitation-learning policies.</p>
@@ -70,7 +88,7 @@
           <img src="../assets/img/famail-trajectory.png" alt="FAMAIL trajectory modification dashboard with two heatmaps">
         </div>
 
-        <section>
+        <section id="architecture">
           <span class="label">Architecture</span>
           <h2>Architecture</h2>
           <div class="diagram">
@@ -91,7 +109,7 @@
           </figure>
         </section>
 
-        <section>
+        <section id="highlights">
           <span class="label">Highlights</span>
           <h2>Highlights</h2>
           <ul class="highlights">
@@ -105,13 +123,13 @@
           </figure>
         </section>
 
-        <section>
+        <section id="tech-stack">
           <span class="label">Tech Stack</span>
           <h2>Tech stack</h2>
           <p>PyTorch · imitation learning / behavioral cloning · fairness and bias mitigation · spatial-temporal data processing · high-performance computing (CPU/GPU workload partitioning).</p>
         </section>
 
-        <section>
+        <section id="gallery">
           <span class="label">Gallery</span>
           <h2>Gallery</h2>
           <p>More dashboards and analysis are on the dedicated FAMAIL project site.</p>

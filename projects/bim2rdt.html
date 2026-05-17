@@ -30,6 +30,25 @@
     </div>
   </nav>
 
+  <!--
+  Section navigation — scroll-spy. To try a different visual style,
+  swap the modifier class on the <nav> below:
+    section-nav--labels  — always-visible text labels (default)
+    section-nav--dots    — minimal dots; label appears on hover / current
+    section-nav--rail    — tick lines; label appears on hover / current
+-->
+<nav class="section-nav section-nav--labels" aria-label="Section navigation">
+  <ul>
+    <li><a href="#problem"><span class="marker" aria-hidden="true"></span><span class="label-text">Problem</span></a></li>
+    <li><a href="#what-i-built"><span class="marker" aria-hidden="true"></span><span class="label-text">What I Built</span></a></li>
+    <li><a href="#architecture"><span class="marker" aria-hidden="true"></span><span class="label-text">Architecture</span></a></li>
+    <li><a href="#highlights"><span class="marker" aria-hidden="true"></span><span class="label-text">Highlights</span></a></li>
+    <li><a href="#current-research"><span class="marker" aria-hidden="true"></span><span class="label-text">Research</span></a></li>
+    <li><a href="#tech-stack"><span class="marker" aria-hidden="true"></span><span class="label-text">Tech Stack</span></a></li>
+    <li><a href="#gallery"><span class="marker" aria-hidden="true"></span><span class="label-text">Gallery</span></a></li>
+  </ul>
+</nav>
+
   <main class="wrap">
     <a class="crumb" href="../index.html#featured-work">← Back to Work</a>
 
@@ -54,13 +73,13 @@
         </dl>
       </aside>
       <div class="detail-main">
-        <section>
+        <section id="problem">
           <span class="label">The Problem</span>
           <h2>The problem</h2>
           <p>Building information models are created once, then drift out of date the moment construction begins. Robots operating on a site need a current, semantically rich model to navigate, inspect, and monitor safety — but keeping a BIM synchronized with the physical world is an unsolved problem.</p>
         </section>
 
-        <section>
+        <section id="what-i-built">
           <span class="label">What I Built</span>
           <h2>What I built</h2>
           <p>BIM2RDT is an agentic AI framework that fuses a static BIM with live LiDAR and IMU sensor data to produce safety-aware, robot-ready site digital twins. I co-authored the framework and contributed to its agentic pipeline, which grounds LLM-driven robot task planning in up-to-date geometric and semantic site context — supporting autonomous inspection, navigation, and construction-safety monitoring.</p>
@@ -70,7 +89,7 @@
           <img src="../assets/img/bim2rdt-digital-twin.png" alt="BIM2RDT digital twin beside a simulated real-world construction scene">
         </div>
 
-        <section>
+        <section id="architecture">
           <span class="label">Architecture</span>
           <h2>Architecture</h2>
           <p>The framework processes the as-designed BIM and live sensor streams through a multi-stage agentic pipeline. Its headline contribution is Semantic-Gravity ICP — a registration algorithm that uses LLM-derived gravity priors to constrain how robot-acquired scans align with the reference model.</p>
@@ -84,7 +103,7 @@
           </figure>
         </section>
 
-        <section>
+        <section id="highlights">
           <span class="label">Highlights</span>
           <h2>Highlights</h2>
           <ul class="highlights">
@@ -99,7 +118,7 @@
           </figure>
         </section>
 
-        <section>
+        <section id="current-research">
           <span class="label">Current Research</span>
           <h2>Uncertainty-Aware Scan-to-BIM via Evidential Deep Learning</h2>
           <p>BIM2RDT demonstrates perception and event injection but explicitly leaves the geometric update closure — deciding when a detected discrepancy should actually edit the BIM — as future work. My CONE 652 research proposal closes exactly that gap.</p>
@@ -118,13 +137,13 @@
           </div>
         </section>
 
-        <section>
+        <section id="tech-stack">
           <span class="label">Tech Stack</span>
           <h2>Tech stack</h2>
           <p>Agentic AI / multi-agent LLMs · BIM and IFC (IfcOpenShell) · LiDAR and IMU sensor fusion · point-cloud semantic segmentation · evidential deep learning · PyTorch.</p>
         </section>
 
-        <section>
+        <section id="gallery">
           <span class="label">Gallery</span>
           <h2>Gallery</h2>
           <p>Related robotics work from the DiCE Lab — the Unitree Go1 quadruped sensor platform from the lab's i3ce control-framework project.</p>
