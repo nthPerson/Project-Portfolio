@@ -128,7 +128,7 @@ a:focus-visible, button:focus-visible {
 /* ===== Hero (centered) ===== */
 .hero { text-align: center; padding: clamp(3rem, 9vw, 6rem) 0 clamp(2.5rem, 6vw, 4rem); }
 .hero-photo {
-  width: 150px; height: 150px; border-radius: 50%; object-fit: cover;
+  width: 250px; height: 250px; border-radius: 50%; object-fit: cover;
   margin: 0 auto 1.6rem; background: var(--circle-bg);
   border: 3px solid var(--accent);
 }
