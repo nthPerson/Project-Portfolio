@@ -56,5 +56,15 @@
       }, { rootMargin: "-15% 0px -80% 0px", threshold: 0 });
       spiedSections.forEach(function (s) { spy.observe(s); });
     }
+
+    // Activate the last section when the page is scrolled to the bottom
+    // (the final section often can't reach the scroll-spy band).
+    window.addEventListener("scroll", function () {
+      if (navLinks.length &&
+          window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+        navLinks.forEach(function (a) { a.classList.remove("is-current"); });
+        navLinks[navLinks.length - 1].classList.add("is-current");
+      }
+    }, { passive: true });
   }
 })();
