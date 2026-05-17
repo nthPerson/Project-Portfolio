@@ -335,3 +335,20 @@ figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 0.5rem; font-s
 .diagram-node.is-accent { background: var(--accent); color: var(--paper); }
 .diagram-node.is-ink { background: var(--ink); color: var(--paper); }
 .diagram-arrow { color: var(--accent); }
+
+/* ===== Credentials & Awards ===== */
+.cred-block + .cred-block { margin-top: 2.6rem; }
+.cred-block h3 { font-size: 1.3rem; margin-bottom: 1rem; }
+
+/* ===== Technical Skills ===== */
+.skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.8rem 2.5rem; }
+.skill-group h3 { font-size: 1.15rem; margin-bottom: 0.8rem; }
+.skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; margin: 0; padding: 0; }
+.skill-tags li {
+  font-family: var(--font-mono); font-size: 0.72rem;
+  padding: 0.32rem 0.6rem; border: 1px solid var(--border);
+  border-radius: 4px; background: var(--card); color: var(--ink);
+}
+@media (max-width: 720px) {
+  .skills-grid { grid-template-columns: 1fr; }
+}
