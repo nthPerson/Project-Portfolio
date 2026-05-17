@@ -36,35 +36,40 @@
     revealEls.forEach(function (el) { el.classList.add("is-visible"); });
   }
 
-  // Section-nav scroll-spy (landing page)
+  // Section-nav scroll-spy (landing page) — single source of truth.
   var sectionNav = document.querySelector(".section-nav");
   if (sectionNav) {
-    var navLinks = sectionNav.querySelectorAll("a");
-    var linkById = {};
-    navLinks.forEach(function (a) {
-      linkById[a.getAttribute("href").slice(1)] = a;
-    });
-    var spiedSections = document.querySelectorAll("main section[id]");
-    if ("IntersectionObserver" in window && spiedSections.length) {
-      var spy = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting && linkById[entry.target.id]) {
-            navLinks.forEach(function (a) { a.classList.remove("is-current"); });
-            linkById[entry.target.id].classList.add("is-current");
-          }
+    var navLinks = Array.prototype.slice.call(sectionNav.querySelectorAll("a"));
+    var spied = Array.prototype.slice.call(document.querySelectorAll("main section[id]"));
+    if (navLinks.length && spied.length) {
+      var setCurrent = function (id) {
+        navLinks.forEach(function (a) {
+          a.classList.toggle("is-current", a.getAttribute("href") === "#" + id);
         });
-      }, { rootMargin: "-15% 0px -80% 0px", threshold: 0 });
-      spiedSections.forEach(function (s) { spy.observe(s); });
+      };
+      var updateSpy = function () {
+        // At (or near) the page bottom, the final section is always current.
+        if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+          setCurrent(spied[spied.length - 1].id);
+          return;
+        }
+        // Otherwise: the last section whose top has passed a line 30% down the viewport.
+        var line = window.scrollY + window.innerHeight * 0.3;
+        var currentId = spied[0].id;
+        for (var i = 0; i < spied.length; i++) {
+          if (spied[i].offsetTop <= line) { currentId = spied[i].id; }
+        }
+        setCurrent(currentId);
+      };
+      var ticking = false;
+      window.addEventListener("scroll", function () {
+        if (!ticking) {
+          window.requestAnimationFrame(function () { updateSpy(); ticking = false; });
+          ticking = true;
+        }
+      }, { passive: true });
+      window.addEventListener("resize", updateSpy, { passive: true });
+      updateSpy();
     }
-
-    // Activate the last section when the page is scrolled to the bottom
-    // (the final section often can't reach the scroll-spy band).
-    window.addEventListener("scroll", function () {
-      if (navLinks.length &&
-          window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
-        navLinks.forEach(function (a) { a.classList.remove("is-current"); });
-        navLinks[navLinks.length - 1].classList.add("is-current");
-      }
-    }, { passive: true });
   }
 })();
