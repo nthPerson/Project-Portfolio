@@ -352,3 +352,51 @@ figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 0.5rem; font-s
 @media (max-width: 720px) {
   .skills-grid { grid-template-columns: 1fr; }
 }
+
+/* ===== Section navigation (scroll-spy) — landing page ===== */
+.section-nav {
+  position: fixed;
+  left: 1.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 40;
+  display: none;
+}
+@media (min-width: 1440px) {
+  .section-nav { display: block; }
+}
+.section-nav ul {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-direction: column; gap: 0.15rem;
+}
+.section-nav a {
+  display: flex; align-items: center; gap: 0.7rem;
+  text-decoration: none; color: var(--muted);
+  font-family: var(--font-mono); font-size: 0.66rem;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0.32rem 0;
+}
+.section-nav a:hover { color: var(--ink); }
+.section-nav a.is-current { color: var(--accent-dark); }
+.section-nav .marker { flex-shrink: 0; transition: width .2s ease, background .2s ease; }
+.section-nav .label-text { transition: opacity .2s ease; }
+
+/* Variant: labels — always-visible text + growing tick */
+.section-nav--labels .marker { width: 14px; height: 2px; background: currentColor; }
+.section-nav--labels a.is-current { font-weight: 600; }
+.section-nav--labels a.is-current .marker { width: 26px; background: var(--accent); }
+
+/* Variant: dots — minimal dots, label on hover/current */
+.section-nav--dots .marker { width: 9px; height: 9px; border-radius: 50%; border: 1.5px solid var(--muted); }
+.section-nav--dots a:hover .marker { border-color: var(--ink); }
+.section-nav--dots a.is-current .marker { background: var(--accent); border-color: var(--accent); }
+.section-nav--dots .label-text { opacity: 0; }
+.section-nav--dots a:hover .label-text,
+.section-nav--dots a.is-current .label-text { opacity: 1; }
+
+/* Variant: rail — tick lines, label on hover/current */
+.section-nav--rail .marker { width: 18px; height: 2px; background: var(--muted); }
+.section-nav--rail a.is-current .marker { width: 34px; background: var(--accent); }
+.section-nav--rail .label-text { opacity: 0; }
+.section-nav--rail a:hover .label-text,
+.section-nav--rail a.is-current .label-text { opacity: 1; }

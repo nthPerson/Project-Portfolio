@@ -35,4 +35,26 @@
     // No IntersectionObserver — show everything
     revealEls.forEach(function (el) { el.classList.add("is-visible"); });
   }
+
+  // Section-nav scroll-spy (landing page)
+  var sectionNav = document.querySelector(".section-nav");
+  if (sectionNav) {
+    var navLinks = sectionNav.querySelectorAll("a");
+    var linkById = {};
+    navLinks.forEach(function (a) {
+      linkById[a.getAttribute("href").slice(1)] = a;
+    });
+    var spiedSections = document.querySelectorAll("main section[id]");
+    if ("IntersectionObserver" in window && spiedSections.length) {
+      var spy = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && linkById[entry.target.id]) {
+            navLinks.forEach(function (a) { a.classList.remove("is-current"); });
+            linkById[entry.target.id].classList.add("is-current");
+          }
+        });
+      }, { rootMargin: "-15% 0px -80% 0px", threshold: 0 });
+      spiedSections.forEach(function (s) { spy.observe(s); });
+    }
+  }
 })();
